@@ -1,0 +1,17 @@
+<div class="blog-comment {{comment.comment_type}} {{ comment.comment_parent != 0 ? 'parent parent-' ~ comment.comment_parent }}" id="blog-comment-{{comment.ID}}">
+	<header class="comment-header">
+		{% set avatar = function("get_avatar", comment) %}
+		{% if avatar %}
+			<div class="comment-author-image">
+				{{ avatar }}
+			</div>
+		{% endif %}
+		<div class="comment-author-details">
+			<h5 class="comment-author"><a href="{{ comment.author_url }}" title="{{ comment.author.name }}">{{comment.author.name}}</a> says{{ comment.comment_parent != 0 ? " to "}}{{ comment.comment_parent != 0 ? function("comment_author", comment.comment_parent) }}: <div class="comment-date">{{ comment.date|date("F jS Y \\a\\t g:ia") }}</div></h5>
+		</div>
+	<div class="u-cf"></div>
+	</header>
+
+	<div class="comment-content">{{comment.comment_content|wpautop}}</div>
+	<div class="u-cf"></div>
+</div>

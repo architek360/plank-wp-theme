@@ -1,0 +1,13 @@
+<article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
+	{% block content %}
+		<h2 class="h2"><a href="{{post.link}}" class="fancy">{{post.title}}</a></h2>
+		<div class="date">
+			{{ post.post_date|date}}
+		</div>
+		{% if post.get_field('post_type') == "Image" %}
+			{{post.content}}
+		{% else %}
+			<p>{{post.get_preview}}</p>
+		{% endif %}
+	{% endblock %}
+</article>

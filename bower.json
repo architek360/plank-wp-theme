@@ -1,0 +1,18 @@
+{
+  "name": "zach-adams-theme",
+  "version": "1.0.0",
+  "homepage": "http://zach-adams.com",
+  "authors": [
+    "Zach Adams <zach@zach-adams.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.2",
+    "skeleton-css": "~2.0.4"
+  }
+}

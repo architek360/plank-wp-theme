@@ -1,0 +1,16 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="article-content">
+				<div class="article-body">
+					<p>Sorry, we couldn't find what you're looking for. Try searching for it?</p>
+
+					{{ function("get_search_form") }}
+				</div>
+			</section>
+
+		</article>
+	</div> <!-- /content-wrapper -->
+{% endblock %}

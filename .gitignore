@@ -1,0 +1,6 @@
+node_modules/*
+.sass-cache/*
+vendor/*
+.DS_Store
+.idea
+*.sublime-project
